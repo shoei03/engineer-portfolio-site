@@ -1,0 +1,23 @@
+{
+  "recommendations": [
+    // Essential for Next.js development
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+
+    // Tailwind CSS
+    "bradlc.vscode-tailwindcss",
+
+    // TypeScript support
+    "ms-vscode.vscode-typescript-next",
+
+    // Git
+    "eamodio.gitlens",
+
+    // Code quality
+    "streetsidesoftware.code-spell-checker",
+    "usernamehw.errorlens",
+
+    // Import organization
+    "dozerg.tsimportsorter"
+  ]
+}

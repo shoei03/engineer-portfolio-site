@@ -1,0 +1,83 @@
+# Engineer Portfolio Site - Development Rules
+
+## Project Overview
+
+This is a Next.js 16 portfolio website using TypeScript, Tailwind CSS, and Bun.
+
+## Code Style
+
+- Use TypeScript for all new files
+- Follow the existing code formatting (Prettier configuration)
+- Use functional components with React hooks
+- Prefer arrow functions for components
+
+## File Organization
+
+- Keep components in the `app/` directory following Next.js 16 app router structure
+- Use lowercase with hyphens for file names (kebab-case)
+- Co-locate related files (components, styles, tests)
+
+## Import Order
+
+1. Next.js imports
+2. React imports
+3. Third-party libraries
+4. Internal modules (absolute imports with @/)
+5. Relative imports
+6. Type imports
+
+## Naming Conventions
+
+- Components: PascalCase
+- Files: kebab-case
+- Functions: camelCase
+- Constants: UPPER_SNAKE_CASE
+- Types/Interfaces: PascalCase with descriptive names
+
+## React Best Practices
+
+- Use server components by default (Next.js 16 app router)
+- Only use 'use client' directive when necessary (interactivity, hooks, browser APIs)
+- Extract reusable logic into custom hooks
+- Keep components small and focused (< 200 lines when possible)
+
+## Tailwind CSS Guidelines
+
+- Use utility classes directly
+- Avoid inline styles
+- Use dark: variant for dark mode support
+- Group related classes logically (layout, spacing, typography, colors)
+
+## TypeScript Guidelines
+
+- Always type function parameters and return values
+- Use type inference for simple cases
+- Prefer interfaces over types for object shapes
+- Use const assertions for literal types
+
+## Git Practices
+
+- Write clear, descriptive commit messages
+- Create feature branches from main
+- Keep PRs focused and reviewable
+
+## Performance
+
+- Use Next.js Image component for images
+- Implement lazy loading where appropriate
+- Optimize bundle size (use dynamic imports when needed)
+
+## Accessibility
+
+- Include alt text for images
+- Use semantic HTML
+- Ensure keyboard navigation works
+- Maintain proper heading hierarchy
+
+## When suggesting code changes:
+
+- Always consider mobile responsiveness
+- Ensure dark mode compatibility
+- Maintain existing code style
+- Add appropriate comments for complex logic
+- Consider performance implications

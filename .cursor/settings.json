@@ -1,0 +1,8 @@
+{
+  // Inherit from VSCode settings
+  "$extends": "./.vscode/settings.json",
+
+  // Cursor-specific settings
+  "cursor.cpp.disabledLanguages": [],
+  "cursor.chat.maxTokens": 4000
+}
