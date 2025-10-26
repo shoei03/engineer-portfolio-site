@@ -1,44 +1,61 @@
-# Engineer Portfolio Site
+# Portfolio Site
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+情報系大学生のポートフォリオサイトです。
 
-## Tech Stack
+## 技術スタック
 
-- **Framework**: Next.js 16
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS v4
-- **Runtime**: Bun
-- **Package Manager**: Bun
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS v4
+- next-themes (ダークモード対応)
 
-## Getting Started
+## 環境変数の設定
 
-First, run the development server:
+個人情報を保護するため、以下の環境変数を設定してください：
+
+1. `.env.local` ファイルを作成
+2. 以下の内容を記入：
 
 ```bash
-bun dev
+# 個人情報
+NEXT_PUBLIC_PROFILE_NAME=あなたの名前
+NEXT_PUBLIC_PROFILE_AGE=年齢
+NEXT_PUBLIC_PROFILE_LOCATION=所在地
+NEXT_PUBLIC_PROFILE_EMAIL=your-email@example.com
+NEXT_PUBLIC_PROFILE_PHONE=電話番号
+NEXT_PUBLIC_PROFILE_IMAGE=/your-profile-image.jpg
+
+# ソーシャルリンク
+NEXT_PUBLIC_GITHUB_URL=https://github.com/yourusername
+NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/yourusername
+NEXT_PUBLIC_TWITTER_URL=https://twitter.com/yourusername
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 開発サーバーの起動
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bun install
+bun run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## デプロイ
 
-## Learn More
+環境変数を設定してからデプロイしてください。
 
-To learn more about Next.js, take a look at the following resources:
+### Vercel の場合
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Vercel のダッシュボードで以下の環境変数を設定：
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `NEXT_PUBLIC_PROFILE_NAME`
+- `NEXT_PUBLIC_PROFILE_AGE`
+- `NEXT_PUBLIC_PROFILE_LOCATION`
+- `NEXT_PUBLIC_PROFILE_EMAIL`
+- `NEXT_PUBLIC_PROFILE_PHONE`
+- `NEXT_PUBLIC_GITHUB_URL`
+- `NEXT_PUBLIC_LINKEDIN_URL`
+- `NEXT_PUBLIC_TWITTER_URL`
 
-## Deploy on Vercel
+## 注意事項
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-## AI Development
-
-For AI agents and assistants working on this project, see [AGENTS.md](./AGENTS.md) for detailed context and guidelines.
+- `.env.local` ファイルは GitHub にアップロードされません
+- 個人情報は環境変数で管理し、コードには直接記述しないでください
